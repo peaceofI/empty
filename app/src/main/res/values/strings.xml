@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Barakah Focus</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="timer">Timer</string>
+    <string name="subjects">Subjects</string>
+    <string name="tasks">Tasks</string>
+    <string name="flashcards">Flashcards</string>
+    <string name="notes">Notes</string>
+    <string name="calendar">Calendar</string>
+    <string name="routine">Routine</string>
+    <string name="usage">Usage</string>
+    <string name="focus_mode">Focus Mode</string>
+    <string name="app_lock">App Lock</string>
+    <string name="rewards">Rewards</string>
+    <string name="prayers">Prayers</string>
+    <string name="alarm">Alarm</string>
+    <string name="settings">Settings</string>
+</resources>

@@ -1,0 +1,12 @@
+package com.study.barakahfocus.ui.flashcards
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.study.barakahfocus.R
+
+class FlashcardsActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_flashcards)
+    }
+}

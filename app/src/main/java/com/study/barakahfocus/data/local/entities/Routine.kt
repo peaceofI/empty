@@ -1,0 +1,11 @@
+package com.study.barakahfocus.data.local.entities
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "routine")
+data class Routine(
+    @PrimaryKey (autoGenerate = true
+)
+    id: Int, name: String, startTime: Long, repeatDays: String, enabled: Boolean
+)

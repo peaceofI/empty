@@ -1,0 +1,10 @@
+package com.study.barakahfocus.data.local.entities
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "reward")
+data class Reward(
+    @PrimaryKey(autoGenerate = true)
+    id: Int, name: String, pointsCost: Int, unlocked: Boolean
+)

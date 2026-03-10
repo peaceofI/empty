@@ -1,0 +1,10 @@
+package com.study.barakahfocus.data.local.entities
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "prayertime")
+data class PrayerTime(
+    @PrimaryKey(autoGenerate = true)
+    id: Int, name: String, time: Long, notified: Boolean
+)

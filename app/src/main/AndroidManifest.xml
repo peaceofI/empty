@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application
+        android:name=".BarakahFocusApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.BarakahFocus"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.timer.TimerActivity" />
+        <activity android:name=".ui.subjects.SubjectsActivity" />
+        <activity android:name=".ui.tasks.TasksActivity" />
+        <activity android:name=".ui.flashcards.FlashcardsActivity" />
+        <activity android:name=".ui.notes.NotesActivity" />
+        <activity android:name=".ui.calendar.CalendarActivity" />
+        <activity android:name=".ui.routine.RoutineActivity" />
+        <activity android:name=".ui.usage.UsageActivity" />
+        <activity android:name=".ui.focus.FocusModeActivity" />
+        <activity android:name=".ui.applock.AppLockActivity" />
+        <activity android:name=".ui.applock.UnlockActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance" />
+        <activity android:name=".ui.rewards.RewardsActivity" />
+        <activity android:name=".ui.prayers.PrayerActivity" />
+        <activity android:name=".ui.alarm.AlarmActivity" />
+        <activity android:name=".ui.settings.SettingsActivity" />
+
+        <service android:name=".service.TimerForegroundService"
+            android:foregroundServiceType="mediaPlayback" />
+        <service android:name=".service.FocusBlockerForegroundService"
+            android:foregroundServiceType="specialUse" />
+        <service android:name=".service.AppLockForegroundService"
+            android:foregroundServiceType="specialUse" />
+        <service android:name=".service.AlarmForegroundService"
+            android:foregroundServiceType="specialUse" />
+        <service android:name=".service.UsageTrackingService"
+            android:foregroundServiceType="dataSync" />
+
+        <receiver android:name=".receiver.BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver android:name=".receiver.PrayerAlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+</manifest>

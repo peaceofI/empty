@@ -1,0 +1,10 @@
+package com.study.barakahfocus.data.local.entities
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "note")
+data class Note(
+    @PrimaryKey(autoGenerate = true)
+    id: Int, title: String, content: String, subject: String, lastModified: Long
+)
